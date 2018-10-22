@@ -15,7 +15,7 @@ GPIO.setup(led, GPIO.OUT)
 GPIO.setup(button, GPIO.IN, pull_up_down = GPIO.PUD_DOWN
 
 
-while (True):
+while True:
     if (GPIO.input(button1) == GPIO.HIGH):
         GPIO.output(led, GPIO.HIGH)
         sleep(0.1)
