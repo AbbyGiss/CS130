@@ -25,7 +25,7 @@ def tableMaker ():
 def seqCalc (size):
     avrg = math.ceil(size/2)
     return avrg
-
+#
 # a function that calculates the maximum number of comparisons of a binary search on a list of size n
 # -input: the list size
 # -output: the average number of comparisons
