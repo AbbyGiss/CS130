@@ -32,7 +32,7 @@ def seqCalc (size):
 def binCalc (size):
     avrg = math.floor(math.log(size,2)+1)
     return avrg
-
+#
 ###############################################
 # MAIN PART OF THE PROGRAM
 ###############################################
