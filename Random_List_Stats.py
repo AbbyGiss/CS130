@@ -22,22 +22,23 @@ def mean (nums):
         sum_num = 0
         for numbers in nums:
                 sum_num += numbers
-        return (sum_num / len(nums))
+        if (sum_num % len(nums)) == 0:
+                return (sum_num / len(nums))
+        else:
+                return (float(sum_num / len(nums)))
 # function that receives the list as a parameter, and calculates and returns the median
 def median (nums):
         nums.sort ()
         n = len(nums) / 2
-        if ((len(nums) * 2) == 0):
+        if ((len(nums) % 2) == 0):
                 mid = (nums [n] + nums [n -1]) / 2
-        elif (len(nums) == 3):
-                mid =  nums [n] / 2
         else:
                 mid = nums [int(math.ceil(n))]
         return mid
 # function that receives the list as a parameter, and calculates and returns the range
-
-
-
+def number_range (nums):
+        range_num = (max(nums) - min(nums))
+        return range_num
 ###############################################
 # MAIN PART OF THE PROGRAM
 # implement the main part of your program below
@@ -56,4 +57,5 @@ print ("The mean of the list is: {}".format(mean))
 med = median(nums)
 print ("The median of the list is: {}".format(med))
 # calculate and display the range
-
+number_range = range_num (nums)
+print ("The range of the list is: {}".format(number_range))
