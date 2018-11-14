@@ -30,10 +30,11 @@ def mean (nums):
 def median (nums):
         nums.sort ()
         n = len(nums) / 2
-        if ((len(nums) % 2) == 0):
-                mid = (nums [n] + nums [n -1]) / 2
-        else:
-                mid = nums [int(math.ceil(n))]
+        for numbers in nums:
+                if ((len(nums) % 2) == 0):
+                        mid = (nums [n] + nums [n -1]) / 2
+                else:
+                        mid = nums [int(math.ceil(n))]
         return mid
 # function that receives the list as a parameter, and calculates and returns the range
 def number_range (nums):
@@ -54,8 +55,8 @@ print ("The list: {}".format(nums))
 mean = mean (nums)
 print ("The mean of the list is: {}".format(mean))
 # calculate and display the median
-med = median(nums)
+med = median (nums)
 print ("The median of the list is: {}".format(med))
 # calculate and display the range
-number_range = range_num (nums)
-print ("The range of the list is: {}".format(number_range))
+range_num = number_range (nums)
+print ("The range of the list is: {}".format(range_num))
